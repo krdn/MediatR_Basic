@@ -1,5 +1,10 @@
 using MediatR_Basic.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using MediatR_Basic.Services.MediatR;
+using Notifier1 = MediatR_Basic.Services.Notifier1;
+using Notifier2 = MediatR_Basic.Services.Notifier2;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +22,8 @@ builder.Services.AddTransient<INotifier, Notifier2>();
 
 builder.Services.AddTransient<INotifierMediatorService, NotifierMediatorService>();
 
-//builder.Services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+builder.Services.AddTransient<INotifierMediatRService, NotifierMediatRService>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
 var app = builder.Build();
 

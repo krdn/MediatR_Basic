@@ -1,13 +1,16 @@
-# MediatR_Basic
+ï»¿# MediatR_Basic
 
 https://www.notion.so/krdn/MediatR-516b15e9f7274da1bdfd0a0f52835f83?pvs=4#90a68449397144cba45bcff225dd8893
 
+[The Mediator Pattern In C# .NET â€“ Part 1 â€“ Whatâ€™s A Mediator?](https://dotnetcoretutorials.com/the-mediator-pattern-in-net-core-part-1-whats-a-mediator/)
+[The Mediator Pattern In C# .NET â€“ Part 2 â€“ Roll Your Own](https://dotnetcoretutorials.com/the-mediator-pattern-part-2-roll-your-own/)
+[The Mediator Pattern In C# .NET â€“ Part 3 â€“ MediatR Library](https://dotnetcoretutorials.com/the-mediator-pattern-part-3-mediatr-library/)
 
-ÁßÀçÀÚ ÆÐÅÏÀÇ º»ÁúÀº "°´Ã¼ ÁýÇÕÀÌ »óÈ£ ÀÛ¿ëÇÏ´Â ¹æ½ÄÀ» Ä¸½¶È­ÇÏ´Â °´Ã¼¸¦ Á¤ÀÇ"ÇÏ´Â °ÍÀÔ´Ï´Ù. °´Ã¼°¡ ¼­·Î ¸í½ÃÀûÀ¸·Î ÂüÁ¶ÇÏ´Â °ÍÀ» ¹æÁöÇÏ¿© ´À½¼ÇÑ °áÇÕÀ» ÃËÁøÇÏ°í »óÈ£ ÀÛ¿ëÀ» µ¶¸³ÀûÀ¸·Î º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.Å¬¶óÀÌ¾ðÆ® Å¬·¡½º´Â ÁßÀçÀÚ¸¦ »ç¿ëÇÏ¿© ´Ù¸¥ Å¬¶óÀÌ¾ðÆ®¿¡°Ô ¸Þ½ÃÁö¸¦ º¸³¾ ¼ö ÀÖ°í ÁßÀçÀÚ Å¬·¡½ºÀÇ ÀÌº¥Æ®¸¦ ÅëÇØ ´Ù¸¥ Å¬¶óÀÌ¾ðÆ®·ÎºÎÅÍ ¸Þ½ÃÁö¸¦ ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.
+ì¤‘ìž¬ìž íŒ¨í„´ì˜ ë³¸ì§ˆì€ "ê°ì²´ ì§‘í•©ì´ ìƒí˜¸ ìž‘ìš©í•˜ëŠ” ë°©ì‹ì„ ìº¡ìŠí™”í•˜ëŠ” ê°ì²´ë¥¼ ì •ì˜"í•˜ëŠ” ê²ƒìž…ë‹ˆë‹¤. ê°ì²´ê°€ ì„œë¡œ ëª…ì‹œì ìœ¼ë¡œ ì°¸ì¡°í•˜ëŠ” ê²ƒì„ ë°©ì§€í•˜ì—¬ ëŠìŠ¨í•œ ê²°í•©ì„ ì´‰ì§„í•˜ê³  ìƒí˜¸ ìž‘ìš©ì„ ë…ë¦½ì ìœ¼ë¡œ ë³€ê²½í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.í´ë¼ì´ì–¸íŠ¸ í´ëž˜ìŠ¤ëŠ” ì¤‘ìž¬ìžë¥¼ ì‚¬ìš©í•˜ì—¬ ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì‹œì§€ë¥¼ ë³´ë‚¼ ìˆ˜ ìžˆê³  ì¤‘ìž¬ìž í´ëž˜ìŠ¤ì˜ ì´ë²¤íŠ¸ë¥¼ í†µí•´ ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„° ë©”ì‹œì§€ë¥¼ ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 
-- °´Ã¼°¡ »óÈ£ ÀÛ¿ëÇÏ´Â ¹æ½ÄÀ» Ä¸½¶È­ÇÏ´Â °´Ã¼ÀÔ´Ï´Ù. µû¶ó¼­ °´Ã¼ °£ "¸Þ½ÃÁö" Àü´ÞÀ» ºÐ¸íÈ÷ Ã³¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-- ÀÌ´Â °´Ã¼°¡ ¼­·Î¸¦ ÂüÁ¶ÇÏÁö ¾Ê°í ´ë½Å ÁßÀçÀÚ¸¦ ÂüÁ¶ÇÔÀ¸·Î½á ´À½¼ÇÑ °áÇÕÀ» ÃËÁøÇÕ´Ï´Ù. ±×·¡¼­ ±×µéÀº ¸Þ½ÃÁö¸¦ ÁßÀçÀÚ¿¡°Ô Àü´ÞÇÏ°í ÁßÀçÀÚ´Â ÀÌ¸¦ ¿Ã¹Ù¸¥ »ç¶÷¿¡°Ô Àü´ÞÇÒ °ÍÀÔ´Ï´Ù.
+- ê°ì²´ê°€ ìƒí˜¸ ìž‘ìš©í•˜ëŠ” ë°©ì‹ì„ ìº¡ìŠí™”í•˜ëŠ” ê°ì²´ìž…ë‹ˆë‹¤. ë”°ë¼ì„œ ê°ì²´ ê°„ "ë©”ì‹œì§€" ì „ë‹¬ì„ ë¶„ëª…ížˆ ì²˜ë¦¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+- ì´ëŠ” ê°ì²´ê°€ ì„œë¡œë¥¼ ì°¸ì¡°í•˜ì§€ ì•Šê³  ëŒ€ì‹  ì¤‘ìž¬ìžë¥¼ ì°¸ì¡°í•¨ìœ¼ë¡œì¨ ëŠìŠ¨í•œ ê²°í•©ì„ ì´‰ì§„í•©ë‹ˆë‹¤. ê·¸ëž˜ì„œ ê·¸ë“¤ì€ ë©”ì‹œì§€ë¥¼ ì¤‘ìž¬ìžì—ê²Œ ì „ë‹¬í•˜ê³  ì¤‘ìž¬ìžëŠ” ì´ë¥¼ ì˜¬ë°”ë¥¸ ì‚¬ëžŒì—ê²Œ ì „ë‹¬í•  ê²ƒìž…ë‹ˆë‹¤.
 
 
 

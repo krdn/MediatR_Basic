@@ -1,4 +1,5 @@
 using MediatR_Basic.Services;
+using MediatR_Basic.Services.MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediatR_Basic.Controllers;
@@ -14,14 +15,17 @@ public class WeatherForecastController : ControllerBase
     private readonly ILogger<WeatherForecastController> _logger;
     private readonly IEnumerable<INotifier> _notifiers;
     private readonly INotifierMediatorService _notifierMediatorService;
+    private readonly INotifierMediatRService _notifierMediatRService;
 
     public WeatherForecastController(ILogger<WeatherForecastController> logger,
         IEnumerable<INotifier> notifiers,
-        INotifierMediatorService notifierMediatorService)
+        INotifierMediatorService notifierMediatorService,
+        INotifierMediatRService notifierMediatRService)
     {
         _logger = logger;
         _notifiers = notifiers;
         _notifierMediatorService = notifierMediatorService;
+        _notifierMediatRService = notifierMediatRService;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
@@ -53,6 +57,7 @@ public class WeatherForecastController : ControllerBase
     public ActionResult<string> NotifyAll()
     {
         _notifiers.ToList().ForEach(x => x.Notify());
+
         return "Completed IEnumerable";
     }
 
@@ -60,6 +65,7 @@ public class WeatherForecastController : ControllerBase
     public ActionResult<string> NotifyAllMediatorService()
     {
         _notifierMediatorService.Notify();
+
         return "Completed MediatorService";
     }
 
@@ -67,7 +73,17 @@ public class WeatherForecastController : ControllerBase
     [HttpGet("")]
     public ActionResult<string> NotifyAllMediatorServiceCanRun()
     {
-        _notifiers.Where(x => x.CanRun()).ToList().ForEach(x => x.Notify());
+        _notifiers.Where(x => x.CanRun()).ToList()
+            .ForEach(x => x.Notify());
+
         return "Completed MediatorServiceCanRun";
+    }
+
+    [HttpGet("")]
+    public ActionResult<string> NotifyAllMediatR()
+    {
+        _notifierMediatRService.Notify("This is a test notification");
+
+        return "Completed MediatR";
     }
 }
