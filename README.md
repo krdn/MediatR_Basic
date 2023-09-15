@@ -2,6 +2,8 @@
 
 https://www.notion.so/krdn/MediatR-516b15e9f7274da1bdfd0a0f52835f83?pvs=4#90a68449397144cba45bcff225dd8893
 
+아래의 강좌의 코드를 기반으로 제작되었습니다.
+
 [The Mediator Pattern In C# .NET – Part 1 – What’s A Mediator?](https://dotnetcoretutorials.com/the-mediator-pattern-in-net-core-part-1-whats-a-mediator/)
 
 [The Mediator Pattern In C# .NET – Part 2 – Roll Your Own](https://dotnetcoretutorials.com/the-mediator-pattern-part-2-roll-your-own/)
