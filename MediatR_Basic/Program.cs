@@ -1,7 +1,4 @@
 using MediatR_Basic.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using MediatR_Basic.Services.MediatR;
 using Notifier1 = MediatR_Basic.Services.Notifier1;
 using Notifier2 = MediatR_Basic.Services.Notifier2;

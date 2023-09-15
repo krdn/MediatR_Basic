@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using System.Diagnostics;
 
 namespace MediatR_Basic.Services.MediatR;
 
