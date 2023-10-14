@@ -1,5 +1,9 @@
 ﻿# MediatR_Basic
 
+https://www.youtube.com/watch?v=ICJs1CxCRt0&t=2s
+
+ 
+
 https://www.notion.so/krdn/MediatR-516b15e9f7274da1bdfd0a0f52835f83?pvs=4#90a68449397144cba45bcff225dd8893
 
 아래의 강좌의 코드를 기반으로 제작되었습니다.
